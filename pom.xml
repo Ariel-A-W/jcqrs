@@ -11,7 +11,7 @@
 	<groupId>com.jcqrslib</groupId>
 	<artifactId>jcqrs</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>jcqrs</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
