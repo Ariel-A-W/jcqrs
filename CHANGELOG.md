@@ -1,3 +1,6 @@
+version 1.0.2 (24-07-2025)
+- (Add) Añado término Command a la librería interna de jcqrslib para la clase RequestHandlerAliasConfig
+
 version 1.0.2 (23-07-2025)
 - (Add) Añado archivo INSTALL.md
 

@@ -54,15 +54,22 @@ public class RequestHandlerAliasConfig implements BeanDefinitionRegistryPostProc
      * Calls a helper method to generate the alias name from the class name.
      * 
      * Llama a un método auxiliar para generar el nombre del alias a partir del nombre de la clase.
-     * @param className
-     * @return
+     * @param className Class name of the class. Nombre de la clase.
+     * @return Return the compose class name for RequestHandler or RequestCommand alias. 
+     * Retorna la composición del nombre de clase para los alias RequestHandler o RequestCommand.
      */
     private String buildAliasName(String className) {
         // Manipulation of interoperative classes convention.
+        // Case Handler
         if (className.endsWith("Handler")) {
             return Character.toLowerCase(className.charAt(0)) +
                     className.substring(1).replace("Handler", "RequestHandler");
         }
+        // Case Command
+        if (className.endsWith("Command")) {
+            return Character.toLowerCase(className.charAt(0)) +
+                    className.substring(1).replace("Command", "RequestHandler");
+        }        
         return className;
     }
 }
