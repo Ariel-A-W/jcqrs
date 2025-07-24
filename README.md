@@ -396,9 +396,9 @@ Cada uno de los casos de usos utilizaran el manipulador llamado ***Handler***. E
 ```
 Clientes
   |__ Command
-  |   |__ ClientesAddHandler.java
-  |   |__ ClientesDeleteHandler.java
-  |   |__ ClientesUpdateHandler.jave
+  |   |__ ClientesAddCommand.java
+  |   |__ ClientesDeleteCommand.java
+  |   |__ ClientesUpdateCommand.jave
   |__ Query
   |   |__ ClientesAllHandler.java
   |   |__ ClientesByIdHandler.java
@@ -519,7 +519,7 @@ public class ClientesByIdHandler implements IRequestHandler<ClientesByIdRequest,
 
 // Consultas de Escritura (Command)
 @Service
-public class ClientesAddHandler implements IRequestHandler<ClientesAddRequest, Integer> {
+public class ClientesAddCommand implements IRequestHandler<ClientesAddRequest, Integer> {
 
     @Override
     public Integer handle(ClientesAddRequest request) {
@@ -539,7 +539,7 @@ public class ClientesAddHandler implements IRequestHandler<ClientesAddRequest, I
 }
 
 @Service
-public class ClientesDeleteHandler implements IRequestHandler<ClientesDeleteRequest, Integer> {
+public class ClientesDeleteCommand implements IRequestHandler<ClientesDeleteRequest, Integer> {
 
     @Override
     public Integer handle(ClientesDeleteRequest request) {
@@ -559,7 +559,7 @@ public class ClientesDeleteHandler implements IRequestHandler<ClientesDeleteRequ
 }
 
 @Service
-public class ClientesUpdateHandler implements IRequestHandler<ClientesUpdateRequest, Integer> {
+public class ClientesUpdateCommand implements IRequestHandler<ClientesUpdateRequest, Integer> {
 
     @Override
     public Integer handle(ClientesUpdateRequest request) {
