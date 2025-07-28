@@ -1,3 +1,6 @@
+version 1.0.3 (28-07-2025) 
+- (Add) Añado mecanismos asincrónicos para Mediator
+
 version 1.0.2 (24-07-2025)
 - (Add) Añado término Command a la librería interna de jcqrslib para la clase RequestHandlerAliasConfig
 
