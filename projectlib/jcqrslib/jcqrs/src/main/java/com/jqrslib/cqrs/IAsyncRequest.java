@@ -6,4 +6,4 @@ package com.jqrslib.cqrs;
  * 
  * Interface para las solicitudes que encapsulan las respuestas.
  */
-public interface IRequest<TResponse> { }
+public interface IAsyncRequest<TResponse> { }

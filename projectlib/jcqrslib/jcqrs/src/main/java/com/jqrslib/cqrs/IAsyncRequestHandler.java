@@ -1,14 +1,17 @@
 package com.jqrslib.cqrs;
 
+import java.util.concurrent.CompletableFuture;
+
 /**
  * @author Ariel Alejandro Wagner
  * Interface for the requests that encapsulate the responses and implement 
- * the methods for handle() procesos.
+ * the methods for handleAsync() procesos.
  * 
  * Interface para las solicitudes que encapsulan las respuestas e implementa 
- * los métodos para para los procesos de handle().
+ * los métodos para para los procesos de handleAsync().
  */
-public interface IRequestHandler<TRequest extends IRequest<TResponse>, TResponse> {
+public interface IAsyncRequestHandler<TRequest extends IAsyncRequest<TResponse>, TResponse> {
+    
     /**
      * Contain the principal logic. 
      * 
@@ -16,7 +19,7 @@ public interface IRequestHandler<TRequest extends IRequest<TResponse>, TResponse
      * @param request Requests param. Parámetro de solictudes.
      * @return Responses return. Retorno de respuestas.
      */
-    TResponse handle(TRequest request);
+    CompletableFuture handleAsync(TRequest request);
 
     /**
      * Indicates the type of class of requests handled.
